@@ -95,7 +95,11 @@ added via a button. Finally, the questionnaire can be exported as an XML in the 
           xml += questionNode.exportXML() + "\n\n";
         }
 
-        xml += '</qu:Questionnaire>';
+        const scoreNode = this.$.querySelector("#score");
+        if (scoreNode?.value) {
+          xml += `<qu:Score> ${scoreNode.value}</qu:Score>`;
+        }
+        xml += "</qu:Questionnaire>";
 
         return xml;
       },
