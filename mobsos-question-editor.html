@@ -77,7 +77,12 @@ An editor for editing questios in MobSOS.
 
     <paper-input id="title" value="{{title}}" label="Title"></paper-input>
 
-    <paper-input id="quid" value="{{qid}}" label="Question id"></paper-input>
+    <paper-input
+      hidden$="[[_hideOrdinalScaleSegment(pageType)]]"
+      id="quid"
+      value="{{qid}}"
+      label="Question id"
+    ></paper-input>
 
     <paper-input
       id="instructions"
