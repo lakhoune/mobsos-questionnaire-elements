@@ -136,7 +136,7 @@ added via a button. Finally, the questionnaire can be exported as an XML in the 
         var questionNode = document.createElement("mobsos-question-editor");
         questionNode.setAttribute(
           "qid",
-          `\{\{q.${this.$.questionnaire.children.length}\}\}`
+          `q.${this.$.questionnaire.children.length}`
         );
 
         // we need to use the Polymer method here, otherwise the question is not stamped within the local DOM...
